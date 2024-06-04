@@ -1,0 +1,77 @@
+Easy Level Tasks:
+1.Simple Landing Page
+Create a responsive landing page with:
+Header section with logo and navigation menu
+Hero section with background image and title
+Features section highlighting four features of CSEdge
+Testimonial section featuring two testimonials
+Contact Us section with a contact form and social media links
+
+2.Photo Gallery
+Design a lightbox-enabled photo gallery with:
+Thumbnail previews of all images
+Clickable thumbnails to open respective images in a modal window
+Close functionality to exit the modal window
+Responsive design for optimal viewing on mobile devices
+
+3.Portfolio
+Create a minimalistic website showcasing five past web development projects with:
+Title and brief description
+Screenshot or demo video
+Technologies used
+Live preview / GitHub repository link
+
+4.Student Enrollment Form
+Develop a student enrollment form for a fictional educational institution with fields for:
+Student's name, email, phone number
+Course selection
+Additional comments
+Implement form validation for accurate data submission
+
+Medium Level Tasks:
+1.To-Do List
+Create a dynamic to-do list application allowing users to:
+Add, edit, delete, and mark tasks as completed
+Sort tasks by priority, due date, or completion status
+
+2.Calculator
+Develop a functional calculator application capable of:
+Performing basic arithmetic operations
+Ensuring an intuitive user interface with responsive design
+
+3.Quiz Web
+Build an interactive quiz web application featuring:
+Multiple-choice questions on various topics
+Timer for each question, scoring mechanism, and feedback for answers
+Option for users to review their quiz results
+
+4.GitHub Profile Readme Generator
+The GitHub Profile Readme Generator is a tool aimed at simplifying the creation of visually appealing and informative README files for GitHub profiles. It provides users with templates and customization options to showcase their skills, projects, and personality effectively on their GitHub profiles.
+Template Selection: Choose from a variety of pre-designed templates tailored for different purposes, such as showcasing projects, skills, or personal interests.
+Customization Options: Customize the selected template with your own information, including profile picture, bio, social media links, project highlights, and more.
+Markdown Support: Utilize Markdown syntax to format text, add images, links, and other elements to your README.
+Preview: Preview the generated README file before committing changes to your GitHub profile.
+Ease of Use: User-friendly interface with intuitive controls for seamless navigation and editing.
+Version Control Integration: Easily update and maintain your GitHub profile README by integrating it with version control systems like Git.
+
+Hard Level Tasks:
+1.Resume Maker
+Create a comprehensive web application that assists users in building professional resumes:
+Templates for different career levels and industries
+Customizable sections for experience, education, skills, and certifications
+Export options for PDF and HTML formats
+
+2.Tic Tac Toe
+Implement a classic Tic Tac Toe game with:
+Multiplayer functionality for real-time competition
+Game state management, win detection, and responsive design for seamless gameplay
+
+3.Tesla/Apple Web Page Redesign
+Redesign the official website of Tesla or Apple, focusing on:
+Modernizing the user interface and enhancing user experience
+Incorporating innovative design elements using Bootstrap and Tailwind CSS frameworks
+
+4.Blog Using Markdown Articles
+Create a dynamic blog web application allowing users to publish articles in Markdown format with:
+User authentication, article CRUD operations, and rich text editing using Markdown syntax
+Comments section for reader engagement and backend data storage/authentication using Firebase or other cloud services
