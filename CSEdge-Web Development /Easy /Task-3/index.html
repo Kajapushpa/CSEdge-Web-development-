@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <center>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Enrollment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            margin-top: 5px;
+        }
+    </style>
+    
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Enrollment Form</h2>
+    <form id="enrollmentForm" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="name">Student's Name:</label>
+            <input type="text" id="name" name="name">
+            <div class="error" id="nameError"></div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <div class="error" id="emailError"></div>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+            <div class="error" id="phoneError"></div>
+        </div>
+        <div class="form-group">
+            <label for="course">Course Selection:</label>
+            <select id="course" name="course">
+                <option value="">Select a course</option>
+                <option value="course1">CSE</option>
+                <option value="course2">ECE</option>
+                <option value="course3">EEE</option>
+                <option value="course1">CIVIL</option>
+                <option value="course2">MECH</option>
+                <option value="course3">AI & ML</option>
+                <option value="course1">AI & DS</option>
+                <option value="course2">CYBER</option>
+                <option value="course3">IOT</option>
+            </select>
+            <div class="error" id="courseError"></div>
+        </div>
+        <div class="form-group">
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        let isValid = true;
+
+        // Clear previous error messages
+        document.getElementById('nameError').innerText = '';
+        document.getElementById('emailError').innerText = '';
+        document.getElementById('phoneError').innerText = '';
+        document.getElementById('courseError').innerText = '';
+
+        // Validate Name
+        const name = document.getElementById('name').value;
+        if (name === '') {
+            document.getElementById('nameError').innerText = 'Name is required';
+            isValid = false;
+        } else if (!/^[a-zA-Z\s]+$/.test(name)) {
+            document.getElementById('nameError').innerText = 'Name can only contain letters and spaces';
+            isValid = false;
+        }
+
+        // Validate Email
+        const email = document.getElementById('email').value;
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (email === '') {
+            document.getElementById('emailError').innerText = 'Email is required';
+            isValid = false;
+        } else if (!emailPattern.test(email)) {
+            document.getElementById('emailError').innerText = 'Invalid email format';
+            isValid = false;
+        }
+
+        // Validate Phone
+        const phone = document.getElementById('phone').value;
+        const phonePattern = /^\d{10}$/;
+        if (phone === '') {
+            document.getElementById('phoneError').innerText = 'Phone number is required';
+            isValid = false;
+        } else if (!phonePattern.test(phone)) {
+            document.getElementById('phoneError').innerText = 'Invalid phone number format (10 digits required)';
+            isValid = false;
+        }
+
+        // Validate Course Selection
+        const course = document.getElementById('course').value;
+        if (course === '') {
+            document.getElementById('courseError').innerText = 'Please select a course';
+            isValid = false;
+        }
+
+        return isValid;
+    }
+</script>
+
+</body>
+</center>
+</html>
